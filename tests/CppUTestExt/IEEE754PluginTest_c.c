@@ -29,20 +29,11 @@
 
 static volatile float f;
 
-#ifdef _MSC_VER
-#pragma warning(push)
-#pragma warning(disable:4723)	// disable potential divide by 0
-#endif
-
 void set_divisionbyzero_c(void)
 {
     f = 1.0f;
     f /= 0.0f;
 }
-
-#ifdef _MSC_VER
-#pragma warning(pop)
-#endif
 
 void set_overflow_c(void)
 {
